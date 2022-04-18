@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+	<persistence-unit name="PARROT_API">
+
+		<!-- Auto-detect entity -->
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+		<class>com.parrotanalytics.api.apidb_model.Account</class>
+		<class>com.parrotanalytics.api.apidb_model.AccountSetting</class>
+		<class>com.parrotanalytics.api.apidb_model.AccountSettingPK</class>
+		<class>com.parrotanalytics.api.apidb_model.BenchmarkDemand</class>
+		<class>com.parrotanalytics.api.apidb_model.BreakdownDaily</class>
+		<class>com.parrotanalytics.api.apidb_model.BreakdownDailyPK</class>
+		<class>com.parrotanalytics.api.apidb_model.BreakdownWhitelist</class>
+		<class>com.parrotanalytics.api.apidb_model.BreakdownWhitelistPK</class>
+		<class>com.parrotanalytics.api.apidb_model.ConsolidatedContextMetrics</class>
+		<class>com.parrotanalytics.api.apidb_model.ConsolidatedContextMetricsPK</class>
+		<class>com.parrotanalytics.api.apidb_model.ConsolidatedContextMetricsPKV2</class>
+		<class>com.parrotanalytics.api.apidb_model.ConsolidatedContextMetricsV2</class>
+		<class>com.parrotanalytics.api.apidb_model.ContextMetricsSetting</class>
+		<class>com.parrotanalytics.api.apidb_model.ContextMetricsSettingPK</class>
+		<class>com.parrotanalytics.api.apidb_model.ContextMetricsSettingPKV2</class>
+		<class>com.parrotanalytics.api.apidb_model.ContextMetricsSettingV2</class>
+		<class>com.parrotanalytics.api.apidb_model.Country</class>
+		<class>com.parrotanalytics.api.apidb_model.CountryPlatform</class>
+		<class>com.parrotanalytics.api.apidb_model.CountryPlatforms</class>
+		<class>com.parrotanalytics.api.apidb_model.Customer</class>
+		<class>com.parrotanalytics.api.apidb_model.CustomEvent</class>
+		<class>com.parrotanalytics.api.apidb_model.Dashboard</class>
+		<class>com.parrotanalytics.api.apidb_model.DemandExpressionsMonthlyPK</class>
+		<class>com.parrotanalytics.api.apidb_model.DemandExpressionsWeeklyPK</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsComputed</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsComputedPK</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsDaily</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsDailyPK</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsMonthly</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsMonthlyPK</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsQuarterly</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsQuarterlyPK</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsWeekly</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsWeeklyPK</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsYearly</class>
+		<class>com.parrotanalytics.api.apidb_model.ExpressionsYearlyPK</class>
+		<class>com.parrotanalytics.api.apidb_model.ExtendedNewsArticlePK</class>
+		<class>com.parrotanalytics.api.apidb_model.ExtendedPlatformPK</class>
+		<class>com.parrotanalytics.api.apidb_model.GenreDict</class>
+		<class>com.parrotanalytics.api.apidb_model.Insight</class>
+		<class>com.parrotanalytics.api.apidb_model.InternalUser</class>
+		<class>com.parrotanalytics.api.apidb_model.IPortfolio</class>
+		<class>com.parrotanalytics.api.apidb_model.IMDBEpisodeInfo</class>
+		<class>com.parrotanalytics.api.apidb_model.IMDBEpisodeInfoPK</class>
+		<class>com.parrotanalytics.api.apidb_model.Label</class>
+		<class>com.parrotanalytics.api.apidb_model.LabelPK</class>
+		<class>com.parrotanalytics.api.apidb_model.Language</class>
+		<class>com.parrotanalytics.api.apidb_model.LiveAffinityIndex</class>
+		<class>com.parrotanalytics.api.apidb_model.LiveAffinityIndexPK</class>
+		<class>com.parrotanalytics.api.apidb_model.LiveDatasourceMetrics</class>
+		<class>com.parrotanalytics.api.apidb_model.LiveDatasourceMetricsPK</class>
+		<class>com.parrotanalytics.api.apidb_model.LiveMetricStatus</class>
+		<class>com.parrotanalytics.api.apidb_model.Module</class>
+		<class>com.parrotanalytics.api.apidb_model.NewsArticle</class>
+		<class>com.parrotanalytics.api.apidb_model.NewsArticlePK</class>
+		<class>com.parrotanalytics.api.apidb_model.Notification</class>
+		<class>com.parrotanalytics.api.apidb_model.PasswordResetLog</class>
+		<class>com.parrotanalytics.api.apidb_model.Portfolio</class>
+		<class>com.parrotanalytics.api.apidb_model.PortfolioItem</class>
+		<class>com.parrotanalytics.api.apidb_model.PresetPortfolio</class>
+		<class>com.parrotanalytics.api.apidb_model.Product</class>
+		<class>com.parrotanalytics.api.apidb_model.ProductSpec</class>
+		<class>com.parrotanalytics.api.apidb_model.ProductSpecPK</class>
+		<class>com.parrotanalytics.api.apidb_model.Project</class>
+		<class>com.parrotanalytics.api.apidb_model.ProjectTimeSheet</class>
+		<class>com.parrotanalytics.api.apidb_model.RangeKeyLookup</class>
+		<class>com.parrotanalytics.api.apidb_model.RangeKeyLookupPK</class>
+		<class>com.parrotanalytics.api.apidb_model.Report</class>
+		<class>com.parrotanalytics.api.apidb_model.ReportUser</class>
+		<class>com.parrotanalytics.api.apidb_model.ReportUserPK</class>
+		<class>com.parrotanalytics.api.apidb_model.Resource</class>
+		<class>com.parrotanalytics.api.apidb_model.Role</class>
+		<class>com.parrotanalytics.api.apidb_model.Subscription</class>
+		<class>com.parrotanalytics.api.apidb_model.SubscriptionPK</class>
+		<class>com.parrotanalytics.api.apidb_model.TalentSubscription</class>
+		<class>com.parrotanalytics.api.apidb_model.MovieSubscriptionPK</class>
+		<class>com.parrotanalytics.api.apidb_model.MovieSubscription</class>
+		<class>com.parrotanalytics.api.apidb_model.TalentSubscriptionPK</class>
+		<class>com.parrotanalytics.api.apidb_model.TalentExpressionsComputed</class>
+		<class>com.parrotanalytics.api.apidb_model.TalentExpressionsDaily</class>
+		<class>com.parrotanalytics.api.apidb_model.TalentExpressionsMonthly</class>
+		<class>com.parrotanalytics.api.apidb_model.TalentExpressionsQuarterly</class>
+		<class>com.parrotanalytics.api.apidb_model.TalentExpressionsWeekly</class>
+		<class>com.parrotanalytics.api.apidb_model.TalentExpressionsYearly</class>
+		<class>com.parrotanalytics.api.apidb_model.TitleAccountMapping</class>
+		<class>com.parrotanalytics.api.apidb_model.TV360CollectionTemplate</class>
+		<class>com.parrotanalytics.api.apidb_model.TV360Region</class>
+		<class>com.parrotanalytics.api.apidb_model.TvCatalogProxy</class>
+		<class>com.parrotanalytics.api.apidb_model.TVPlatform</class>
+		<class>com.parrotanalytics.api.apidb_model.UserEvent</class>
+		<class>com.parrotanalytics.api.apidb_model.UserLog</class>
+		<class>com.parrotanalytics.api.apidb_model.UserRole</class>
+		<class>com.parrotanalytics.api.apidb_model.UserRolePK</class>
+		<class>com.parrotanalytics.api.apidb_model.UserSetting</class>
+		<class>com.parrotanalytics.api.apidb_model.UserSettingPK</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.ExtendedPlatformInfo</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.ExtendedNewsArticle</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.BucketTopNExpressions</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.CustomDemandExpressions</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.ExtendedPlatformInfo</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.GenePerformance</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.GlobalGenrePerformance</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.InGenreRank</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.GenreEntityCount</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.GroupedBreakdown</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.GroupedExpressions</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.GroupedGenesExpressions</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.MetricRankExpressions</class>
+		<class>com.parrotanalytics.api.apidb_model.nonmanaged.PortfolioWithCount</class>
+		<class>com.parrotanalytics.api.commons.ParrotEntityConverter</class>
+
+		<properties>
+			<!-- EclipseLink JDBC Configuration -->
+			<property name="eclipselink.target-database" value="MySQL" />
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+
+			<property name="eclipselink.jdbc.bind-parameters"
+				value="false" />
+			<property name="eclipselink.jdbc.native-sql" value="true" />
+			<property name="eclipselink.jpa.uppercase-column-names"
+				value="true" />
+
+			<property name="eclipselink.jdbc.batch-writing" value="JDBC" />
+			<property name="eclipselink.jdbc.cache-statements.size"
+				value="1000" />
+			<property name="eclipselink.jdbc.cache-statements"
+				value="false" />
+
+			<property name="eclipselink.persistence-context.flush-mode"
+				value="commit" />
+
+			<!-- Enable/Disable EclipseLink Weaving -->
+			<property name="eclipselink.weaving" value="true" />
+
+			<!-- Enable/Disable EclipseLink Cache -->
+			<property name="eclipselink.cache.shared.default"
+				value="false" />
+
+
+
+			<!-- Logging Properties -->
+			<property name="eclipselink.logging.file"
+				value="sql-queries.log" />
+
+			<!-- <property name="eclipselink.logging.logger" value="com.parrotanalytics.datasourceint.orm.eclipselink.SLF4JEclipselinkSessionLogger" 
+				/> -->
+
+			<property name="eclipselink.logging.level" value="FINE" />
+			<property name="eclipselink.logging.level.sql" value="FINE" />
+			<property name="eclipselink.logging.parameters"
+				value="false" />
+
+			<property name="eclipselink.logging.timestamp" value="true" />
+			<property name="eclipselink.logging.thread" value="true" />
+			<property name="eclipselink.logging.exceptions" value="true" />
+		</properties>
+
+	</persistence-unit>
+</persistence>

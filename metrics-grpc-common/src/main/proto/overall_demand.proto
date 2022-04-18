@@ -1,0 +1,61 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+
+package overalldemand;
+option java_package = "com.parrotanalytics.metrics.commons";
+option java_outer_classname = "OverallDemandServiceProto";
+option java_multiple_files = true;
+
+enum Interval {
+  OVERALL = 0;
+  DAILY = 1;
+  WEEKLY = 2;
+  MONTHLY = 3;
+  YEARLY = 4;
+}
+
+enum Entity {
+  SHOW = 0;
+  TALENT = 1;
+  MOVIE = 2;
+}
+enum Order {
+  ASC = 0;
+  DESC = 1;
+}
+
+message Query {
+  Entity entity = 1;
+  string content = 2;
+  string markets = 3;
+  string period = 4;
+  google.protobuf.Timestamp dateFrom = 5;
+  google.protobuf.Timestamp dateTo = 6;
+}
+
+message OverallDemandRequest {
+  Interval interval = 1;
+  string metricType = 2;
+  string sortBy = 3;
+  repeated Query query = 4;
+  int32 page = 5;
+  int32 size = 6;
+  Order order = 7;
+}
+
+message OverallDemandResponse {
+  message DemandData {
+    google.protobuf.Timestamp date = 1;
+    string market = 2;
+    string label = 3;
+    string parrotId = 4;
+    string value = 5;
+    int32 overallRank = 6;
+  }
+  repeated DemandData data = 1;
+}
+
+
+service OverallDemandService {
+  rpc getOverallDemand (OverallDemandRequest) returns (OverallDemandResponse) {}
+}
